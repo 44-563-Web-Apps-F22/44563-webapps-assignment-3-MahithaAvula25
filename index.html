@@ -77,5 +77,32 @@
                     </tr>
         </tbody>
     </table>
+    <hr>
+    <h3> Code Section with WordPress</h3>
+    <blockquote cite="https://meta.stackoverflow.com/questions/313548/looking-for-my-questions-questions-i-have-asked">what if i want to list out the questions with a specific tag example "svg"</blockquote>
+    <a href="https://meta.stackoverflow.com/questions/313548/looking-for-my-questions-questions-i-have-asked" >Stack overflowlink</a>
+    <pre>
+    
+
+        <?php 
+        
+          // Get all the data 
+          $getPostCustom = get_post_custom(); 
+        
+            foreach($getPostCustom as $name=>$value) {
+        
+                echo "<strong>" . $name . "</strong>"."  =>  ";
+        
+                foreach ($value as $nameAr=>$valueAr) {
+                        echo "<br />";
+                        echo $nameAr."  =>  ";
+                        echo var_dump($valueAr);
+                }
+        
+                echo "<br /><br />";
+        
+            }
+        ?>
+    </pre>
 </body>
 </html>
